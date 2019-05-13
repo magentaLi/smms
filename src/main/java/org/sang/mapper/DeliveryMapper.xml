@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.sang.mapper.DeliveryMapper">
+    <select id="getDelivery" resultType="org.sang.bean.Delivery">
+        SELECT * FROM delivery;
+    </select>
+
+    <insert id="addDelivery">
+        INSERT INTO delivery set deliveryId=#{deliveryId},productCode=#{productCode},supplierCode=#{supplierCode},deliveryDate=#{deliveryDate},
+        productPrice=#{productPrice},productCount=#{productCount},paidMoney=#{paidMoney}
+    </insert>
+
+    <delete id="deleteDeliveryBydId" parameterType="Integer">
+        DELETE FROM delivery WHERE deliveryId=#{deliveryId}
+    </delete>
+
+
+    <select id="getDeliveryById" parameterType="Integer" resultType="org.sang.bean.Delivery">
+        SELECT * FROM delivery where deliveryId=#{deliveryId};
+    </select>
+
+    <update id="updateDelivery" parameterType="org.sang.bean.Delivery">
+        update delivery set deliveryId=#{deliveryId},productCode=#{productCode},supplierCode=#{supplierCode},deliveryDate=#{deliveryDate},productPrice=#{productPrice},
+        productPrice=#{productPrice},productCount=#{productCount} where deliveryId=#{deliveryId}
+    </update>
+
+</mapper>

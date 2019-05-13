@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.sang.mapper.WarehousingMapper">
+    <select id="getWarehousing" resultType="org.sang.bean.Warehousing">
+        SELECT * FROM warehousing;
+    </select>
+    <insert id="addWarehousing" >
+        INSERT INTO warehousing set warehousingId=#{warehousingId},productCode=#{productCode},supplierCode=#{supplierCode},warehousingDate=#{warehousingDate},productPrice=#{productPrice},
+        productCount=#{productCount},paidMoney=#{paidMoney}
+    </insert>
+
+    <delete id="deleteWarehousing" parameterType="Integer">
+        DELETE FROM warehousing WHERE warehousingId=#{warehousingId}
+    </delete>
+
+
+    <select id="getWarehousingById" parameterType="Integer" resultType="org.sang.bean.Warehousing">
+        SELECT * FROM warehousing where warehousingId=#{warehousingId};
+    </select>
+
+    <update id="updateWarehousingById" parameterType="org.sang.bean.Warehousing">
+        update warehousing set productCode=#{productCode},supplierCode=#{supplierCode},warehousingDate=#{warehousingDate},productPrice=#{productPrice},
+        productCount=#{productCount},paidMoney=#{paidMoney} where warehousingId=#{warehousingId}
+    </update>
+
+</mapper>

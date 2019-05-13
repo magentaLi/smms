@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.sang.mapper.SupplierMapper">
+
+    <!--//查询所有供应商-->
+    <!--List<Supplier> getAllSupplier();-->
+    <select id="getAllSupplier" resultType="org.sang.bean.Supplier">
+      select * from supplier;
+    </select>
+
+    <!--//查询单个供应商-->
+    <!--Product getSupplierBySupplierCode(@Param("supplierCode") String supplierCode);-->
+    <select id="getSupplierBySupplierCode" resultType="org.sang.bean.Supplier">
+        select * from supplier where supplierCode = #{supplierCode}
+    </select>
+
+    <!--//删除供应商-->
+    <!--int deleteSupplier(@Param("supplierCode") String supplierCode);-->
+    <delete id="deleteSupplier" parameterType="String">
+        delete from supplier where supplierCode = #{supplierCode}
+    </delete>
+
+    <!--//添加供应商-->
+    <!--int addSupplier(Supplier supplier);-->
+    <insert id="addSupplier" parameterType="org.sang.bean.Supplier">
+        insert into supplier values (#{supplierCode},#{supplierName},#{supplierAddress},#{supplierTel},#{supplierEMail},#{supplierFax},#{supplierReputation},#{supplierLoan})
+    </insert>
+
+    <!--//修改供应商-->
+    <!--int updateSupplier(Supplier supplier);-->
+    <update id="updateSupplier" parameterType="org.sang.bean.Supplier">
+        update supplier set supplierName=#{supplierName},
+                            supplierAddress=#{supplierAddress},
+                            supplierTel=#{supplierTel},
+                            supplierEMail=#{supplierEMail},
+                            supplierFax=#{supplierFax},
+                            supplierReputation=#{supplierReputation},
+                            supplierLoan=#{supplierLoan}
+         where supplierCode=#{supplierCode}
+    </update>
+
+
+
+
+</mapper>

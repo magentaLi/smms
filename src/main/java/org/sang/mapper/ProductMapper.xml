@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.sang.mapper.ProductMapper">
+
+    <!--//查询所有商品-->
+    <!--List<Product> getAllProduct();-->
+    <select id="getAllProduct" resultType="org.sang.bean.Product">
+      select * from product;
+    </select>
+
+    <!--//通过商品代码查找商品-->
+    <!-- Product getProductByProductCode(@Param("product") String productCode);-->
+    <select id="getProductByProductCode" resultType="org.sang.bean.Product">
+        select * from product where productCode = #{productCode}
+    </select>
+
+    <!--//删除商品-->
+    <!--int deleteProduct(@Param("productCode") String productCode);-->
+    <delete id="deleteProduct" parameterType="String">
+        delete from product where productCode = #{productCode}
+    </delete>
+
+    <!--//添加商品-->
+    <!--int addProduct(Product product);-->
+    <insert id="addProduct" parameterType="org.sang.bean.Product">
+        insert into product values (#{productCode},#{productName},#{productCategoryId},#{productionDate},#{guaranteePeriod},#{productPrice},0)
+    </insert>
+
+    <!--//修改商品-->
+    <!--int updateProduct(Product product);-->
+    <update id="updateProduct" parameterType="org.sang.bean.Product">
+        update product set productName=#{productName},productCategoryId=#{productCategoryId},productionDate=#{productionDate},productPrice=#{productPrice}
+         where productCode=#{productCode}
+    </update>
+
+
+</mapper>

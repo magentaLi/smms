@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.sang.mapper.UMenuMapper">
+    <select id="getUMenuById" parameterType="int" resultMap="UMenuMapper">
+        select
+         UMenu.id as uid,
+         UMenu.name as uname,
+         UMenu.path as upath,
+         SubUMenu.id as suid,
+         SubUMenu.name as suname,
+         SubUMenu.route as suroute
+         from role_SubUMenu,SubUMenu,UMenu where SubUMenu.UMenuId = UMenu.id and SubUMenu.id = role_SubUMenu.SubUMenuId and role_SubUMenu.roleId in
+          (select rid from user_role where userId = #{id});
+    </select>
+
+    <resultMap type="org.sang.bean.UMenu" id="UMenuMapper">
+        <id column="uid" property="id"/>
+        <result column="uname" property="name"/>
+        <result column="upath" property="path"/>
+        <collection property="subUMenuList" ofType="org.sang.bean.SubUMenu" column="id">
+            <id column="suid" property="id"/><!-- 这里的column对应的是下面查询的别名，而不是表字段名 -->
+            <result column="suname" property="name"/><!-- property对应JavaBean中的属性名 -->
+            <result column="suroute" property="route"/>
+        </collection>
+    </resultMap>
+</mapper>

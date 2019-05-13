@@ -1,0 +1,3 @@
+2019-05-13 14:37:22.135 - INFO  [  XNIO-2 task-2] o.s.l.SystemLogAspect          : 韩愈_org.sang.controller.TestController.test_测试_第1个参数为:caiunima请求ip:_127.0.0.1
+2019-05-13 14:37:25.014 - INFO  [  XNIO-2 task-3] o.s.l.SystemLogAspect          : 韩愈_org.sang.controller.TestController.test_测试_第1个参数为:caiunima请求ip:_127.0.0.1
+2019-05-13 14:37:26.331 - INFO  [  XNIO-2 task-4] o.s.l.SystemLogAspect          : 韩愈_org.sang.controller.TestController.test_测试_第1个参数为:caiunima请求ip:_127.0.0.1

@@ -1,0 +1,185 @@
+2019-05-13 14:25:03.263 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} created. select * from user WHERE username=?;
+2019-05-13 14:25:03.293 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} Parameters : [hanyu]
+2019-05-13 14:25:03.293 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} Types : [VARCHAR]
+2019-05-13 14:25:03.343 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} executed. 61.678398 millis. select * from user WHERE username=?;
+2019-05-13 14:25:03.396 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} created. SELECT r.* FROM user_role h,role r where h.rid=r.id AND h.userid=?
+2019-05-13 14:25:03.398 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} Parameters : [10]
+2019-05-13 14:25:03.398 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} Types : [INTEGER]
+2019-05-13 14:25:03.441 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} executed. 51.168342 millis. SELECT r.* FROM user_role h,role r where h.rid=r.id AND h.userid=?
+2019-05-13 14:25:03.441 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} clearParameters. 
+2019-05-13 14:25:03.451 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} clearParameters. 
+2019-05-13 14:25:56.633 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} created. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+2019-05-13 14:25:56.634 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} Parameters : []
+2019-05-13 14:25:56.635 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} Types : []
+2019-05-13 14:25:56.679 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} executed. 44.380353 millis. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+2019-05-13 14:25:56.703 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} clearParameters. 
+2019-05-13 14:26:14.779 -DEBUG  [  XNIO-2 task-3] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} Parameters : []
+2019-05-13 14:26:14.779 -DEBUG  [  XNIO-2 task-3] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} Types : []
+2019-05-13 14:26:14.833 -DEBUG  [  XNIO-2 task-3] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} executed. 54.256991 millis. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+2019-05-13 14:26:14.849 -DEBUG  [  XNIO-2 task-3] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} clearParameters. 
+2019-05-13 14:26:19.453 -DEBUG  [  XNIO-2 task-4] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} Parameters : []
+2019-05-13 14:26:19.453 -DEBUG  [  XNIO-2 task-4] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} Types : []
+2019-05-13 14:26:19.514 -DEBUG  [  XNIO-2 task-4] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} executed. 61.614983 millis. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+2019-05-13 14:26:19.534 -DEBUG  [  XNIO-2 task-4] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} clearParameters. 
+2019-05-13 14:28:20.774 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} created. select * from user WHERE username=?;
+2019-05-13 14:28:20.784 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} Parameters : [hanyu]
+2019-05-13 14:28:20.784 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} Types : [VARCHAR]
+2019-05-13 14:28:20.834 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} executed. 52.832532 millis. select * from user WHERE username=?;
+2019-05-13 14:28:20.885 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} created. SELECT r.* FROM user_role h,role r where h.rid=r.id AND h.userid=?
+2019-05-13 14:28:20.887 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} Parameters : [10]
+2019-05-13 14:28:20.888 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} Types : [INTEGER]
+2019-05-13 14:28:20.938 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} executed. 58.023411 millis. SELECT r.* FROM user_role h,role r where h.rid=r.id AND h.userid=?
+2019-05-13 14:28:20.948 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} clearParameters. 
+2019-05-13 14:28:20.948 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} clearParameters. 
+2019-05-13 14:28:26.689 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} created. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+2019-05-13 14:28:26.690 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} Parameters : []
+2019-05-13 14:28:26.691 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} Types : []
+2019-05-13 14:28:26.789 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} executed. 99.005738 millis. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+2019-05-13 14:28:26.822 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} clearParameters. 
+2019-05-13 14:29:16.168 -DEBUG  [  XNIO-2 task-3] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} Parameters : [hanyu]
+2019-05-13 14:29:16.169 -DEBUG  [  XNIO-2 task-3] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} Types : [VARCHAR]
+2019-05-13 14:29:16.246 -DEBUG  [  XNIO-2 task-3] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} executed. 78.763837 millis. select * from user WHERE username=?;
+2019-05-13 14:29:16.248 -DEBUG  [  XNIO-2 task-3] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} Parameters : [10]
+2019-05-13 14:29:16.248 -DEBUG  [  XNIO-2 task-3] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} Types : [INTEGER]
+2019-05-13 14:29:16.298 -DEBUG  [  XNIO-2 task-3] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} executed. 50.303623 millis. SELECT r.* FROM user_role h,role r where h.rid=r.id AND h.userid=?
+2019-05-13 14:29:16.299 -DEBUG  [  XNIO-2 task-3] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} clearParameters. 
+2019-05-13 14:29:16.300 -DEBUG  [  XNIO-2 task-3] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} clearParameters. 
+2019-05-13 14:29:22.933 -DEBUG  [  XNIO-2 task-4] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} Parameters : []
+2019-05-13 14:29:22.934 -DEBUG  [  XNIO-2 task-4] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} Types : []
+2019-05-13 14:29:22.988 -DEBUG  [  XNIO-2 task-4] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} executed. 55.141871 millis. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+2019-05-13 14:29:23.023 -DEBUG  [  XNIO-2 task-4] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} clearParameters. 
+2019-05-13 14:34:56.135 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} created. select * from user WHERE username=?;
+2019-05-13 14:34:56.145 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} Parameters : [hanyu]
+2019-05-13 14:34:56.145 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} Types : [VARCHAR]
+2019-05-13 14:34:56.195 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} executed. 51.992006 millis. select * from user WHERE username=?;
+2019-05-13 14:34:56.235 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} created. SELECT r.* FROM user_role h,role r where h.rid=r.id AND h.userid=?
+2019-05-13 14:34:56.235 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} Parameters : [10]
+2019-05-13 14:34:56.235 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} Types : [INTEGER]
+2019-05-13 14:34:56.295 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} executed. 58.826549 millis. SELECT r.* FROM user_role h,role r where h.rid=r.id AND h.userid=?
+2019-05-13 14:34:56.295 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} clearParameters. 
+2019-05-13 14:34:56.295 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} clearParameters. 
+2019-05-13 14:35:06.755 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} created. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+2019-05-13 14:35:06.756 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} Parameters : []
+2019-05-13 14:35:06.757 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} Types : []
+2019-05-13 14:35:06.803 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} executed. 46.312866 millis. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+2019-05-13 14:35:06.843 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} clearParameters. 
+2019-05-13 14:36:58.079 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} created. select * from user WHERE username=?;
+2019-05-13 14:36:58.089 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} Parameters : [hanyu]
+2019-05-13 14:36:58.089 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} Types : [VARCHAR]
+2019-05-13 14:36:58.155 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} executed. 70.549923 millis. select * from user WHERE username=?;
+2019-05-13 14:36:58.185 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} created. SELECT r.* FROM user_role h,role r where h.rid=r.id AND h.userid=?
+2019-05-13 14:36:58.195 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} Parameters : [10]
+2019-05-13 14:36:58.195 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} Types : [INTEGER]
+2019-05-13 14:36:58.252 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} executed. 60.363541 millis. SELECT r.* FROM user_role h,role r where h.rid=r.id AND h.userid=?
+2019-05-13 14:36:58.252 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} clearParameters. 
+2019-05-13 14:36:58.252 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} clearParameters. 
+2019-05-13 14:37:21.846 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} created. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+2019-05-13 14:37:21.847 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} Parameters : []
+2019-05-13 14:37:21.847 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} Types : []
+2019-05-13 14:37:21.894 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} executed. 46.975243 millis. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+2019-05-13 14:37:21.909 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} clearParameters. 
+2019-05-13 14:37:24.825 -DEBUG  [  XNIO-2 task-3] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} Parameters : []
+2019-05-13 14:37:24.825 -DEBUG  [  XNIO-2 task-3] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} Types : []
+2019-05-13 14:37:24.879 -DEBUG  [  XNIO-2 task-3] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} executed. 54.024957 millis. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+2019-05-13 14:37:24.895 -DEBUG  [  XNIO-2 task-3] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} clearParameters. 
+2019-05-13 14:37:26.169 -DEBUG  [  XNIO-2 task-4] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} Parameters : []
+2019-05-13 14:37:26.170 -DEBUG  [  XNIO-2 task-4] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} Types : []
+2019-05-13 14:37:26.224 -DEBUG  [  XNIO-2 task-4] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} executed. 54.819663 millis. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+2019-05-13 14:37:26.237 -DEBUG  [  XNIO-2 task-4] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} clearParameters. 
+2019-05-13 15:21:21.298 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} created. select * from user WHERE username=?;
+2019-05-13 15:21:21.308 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} Parameters : [hanyu]
+2019-05-13 15:21:21.309 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} Types : [VARCHAR]
+2019-05-13 15:21:21.350 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} executed. 44.966486 millis. select * from user WHERE username=?;
+2019-05-13 15:21:21.364 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} created. SELECT r.* FROM user_role h,role r where h.rid=r.id AND h.userid=?
+2019-05-13 15:21:21.366 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} Parameters : [10]
+2019-05-13 15:21:21.366 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} Types : [INTEGER]
+2019-05-13 15:21:21.407 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} executed. 41.60768 millis. SELECT r.* FROM user_role h,role r where h.rid=r.id AND h.userid=?
+2019-05-13 15:21:21.409 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} clearParameters. 
+2019-05-13 15:21:21.410 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} clearParameters. 
+2019-05-13 15:21:33.268 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} created. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+2019-05-13 15:21:33.269 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} Parameters : []
+2019-05-13 15:21:33.270 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} Types : []
+2019-05-13 15:21:33.313 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} executed. 43.189761 millis. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+2019-05-13 15:21:33.349 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} clearParameters. 
+2019-05-13 15:36:59.238 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} created. select * from user WHERE username=?;
+2019-05-13 15:36:59.248 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} Parameters : [hanyu]
+2019-05-13 15:36:59.248 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} Types : [VARCHAR]
+2019-05-13 15:36:59.298 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} executed. 51.147448 millis. select * from user WHERE username=?;
+2019-05-13 15:36:59.318 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} created. SELECT r.* FROM user_role h,role r where h.rid=r.id AND h.userid=?
+2019-05-13 15:36:59.328 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} Parameters : [10]
+2019-05-13 15:36:59.328 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} Types : [INTEGER]
+2019-05-13 15:36:59.393 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} executed. 63.364581 millis. SELECT r.* FROM user_role h,role r where h.rid=r.id AND h.userid=?
+2019-05-13 15:36:59.396 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} clearParameters. 
+2019-05-13 15:36:59.400 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} clearParameters. 
+2019-05-13 15:37:11.730 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} created. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+2019-05-13 15:37:11.731 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} Parameters : []
+2019-05-13 15:37:11.731 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} Types : []
+2019-05-13 15:37:11.775 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} executed. 48.220087 millis. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+2019-05-13 15:37:11.806 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} clearParameters. 
+2019-05-13 15:41:05.270 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} created. select * from user WHERE username=?;
+2019-05-13 15:41:05.281 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} Parameters : [hanyu]
+2019-05-13 15:41:05.281 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} Types : [VARCHAR]
+2019-05-13 15:41:05.331 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} executed. 53.328856 millis. select * from user WHERE username=?;
+2019-05-13 15:41:05.356 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} created. SELECT r.* FROM user_role h,role r where h.rid=r.id AND h.userid=?
+2019-05-13 15:41:05.359 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} Parameters : [10]
+2019-05-13 15:41:05.359 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} Types : [INTEGER]
+2019-05-13 15:41:05.416 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} executed. 57.905745 millis. SELECT r.* FROM user_role h,role r where h.rid=r.id AND h.userid=?
+2019-05-13 15:41:05.418 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} clearParameters. 
+2019-05-13 15:41:05.419 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} clearParameters. 
+2019-05-13 15:41:11.752 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} created. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+2019-05-13 15:41:11.753 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} Parameters : []
+2019-05-13 15:41:11.753 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} Types : []
+2019-05-13 15:41:11.921 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} executed. 170.673674 millis. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+2019-05-13 15:41:11.992 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} clearParameters. 
+2019-05-13 15:54:31.320 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} created. select * from user WHERE username=?;
+2019-05-13 15:54:31.320 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} Parameters : [hanyu]
+2019-05-13 15:54:31.320 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} Types : [VARCHAR]
+2019-05-13 15:54:31.378 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} executed. 52.73686 millis. select * from user WHERE username=?;
+2019-05-13 15:54:31.392 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} created. SELECT r.* FROM user_role h,role r where h.rid=r.id AND h.userid=?
+2019-05-13 15:54:31.393 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} Parameters : [10]
+2019-05-13 15:54:31.393 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} Types : [INTEGER]
+2019-05-13 15:54:31.454 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} executed. 63.464286 millis. SELECT r.* FROM user_role h,role r where h.rid=r.id AND h.userid=?
+2019-05-13 15:54:31.454 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20001} clearParameters. 
+2019-05-13 15:54:31.454 -DEBUG  [  XNIO-2 task-1] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20000} clearParameters. 
+2019-05-13 15:54:41.992 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} created. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+2019-05-13 15:54:41.993 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} Parameters : []
+2019-05-13 15:54:41.994 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} Types : []
+2019-05-13 15:54:42.144 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} executed. 151.166729 millis. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+2019-05-13 15:54:42.184 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20002} clearParameters. 
+2019-05-13 15:54:42.331 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} created. select * from user where name = ?;
+2019-05-13 15:54:42.332 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} Parameters : [韩愈]
+2019-05-13 15:54:42.333 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} Types : [VARCHAR]
+2019-05-13 15:54:42.376 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} executed. 43.850672 millis. select * from user where name = ?;
+2019-05-13 15:54:42.378 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} clearParameters. 
+2019-05-13 15:54:42.379 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} Parameters : [韩愈]
+2019-05-13 15:54:42.380 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} Types : [VARCHAR]
+2019-05-13 15:54:42.423 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} executed. 49.123294 millis. select * from user where name = ?;
+2019-05-13 15:54:42.423 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} clearParameters. 
+2019-05-13 15:54:42.433 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} Parameters : [韩愈]
+2019-05-13 15:54:42.433 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} Types : [VARCHAR]
+2019-05-13 15:54:42.473 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} executed. 46.345124 millis. select * from user where name = ?;
+2019-05-13 15:54:42.483 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} clearParameters. 
+2019-05-13 15:54:42.487 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} Parameters : [韩愈]
+2019-05-13 15:54:42.489 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} Types : [VARCHAR]
+2019-05-13 15:54:42.531 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} executed. 44.337098 millis. select * from user where name = ?;
+2019-05-13 15:54:42.532 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} clearParameters. 
+2019-05-13 15:54:42.533 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} Parameters : [韩愈]
+2019-05-13 15:54:42.534 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} Types : [VARCHAR]
+2019-05-13 15:54:42.583 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} executed. 49.234729 millis. select * from user where name = ?;
+2019-05-13 15:54:42.584 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} clearParameters. 
+2019-05-13 15:54:42.585 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} Parameters : [韩愈]
+2019-05-13 15:54:42.585 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} Types : [VARCHAR]
+2019-05-13 15:54:42.658 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} executed. 77.822506 millis. select * from user where name = ?;
+2019-05-13 15:54:42.658 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} clearParameters. 
+2019-05-13 15:54:42.668 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} Parameters : [韩愈]
+2019-05-13 15:54:42.668 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} Types : [VARCHAR]
+2019-05-13 15:54:42.708 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} executed. 41.731945 millis. select * from user where name = ?;
+2019-05-13 15:54:42.708 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} clearParameters. 
+2019-05-13 15:54:42.708 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} Parameters : [韩愈]
+2019-05-13 15:54:42.708 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} Types : [VARCHAR]
+2019-05-13 15:54:42.758 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} executed. 48.79119 millis. select * from user where name = ?;
+2019-05-13 15:54:42.758 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} clearParameters. 
+2019-05-13 15:54:42.768 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} Parameters : [韩愈]
+2019-05-13 15:54:42.768 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} Types : [VARCHAR]
+2019-05-13 15:54:42.808 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} executed. 46.856844 millis. select * from user where name = ?;
+2019-05-13 15:54:42.818 -DEBUG  [  XNIO-2 task-2] c.a.d.f.l.Log4j2Filter         : {conn-10005, pstmt-20003} clearParameters. 

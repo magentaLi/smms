@@ -1,0 +1,22 @@
+package org.sang.mapper;
+
+import org.apache.ibatis.annotations.Mapper;
+import org.sang.bean.Delivery;
+import org.sang.bean.Warehousing;
+
+import java.util.List;
+
+@Mapper
+public interface DeliveryMapper {
+
+    int addDelivery(Delivery delivery);
+
+    int deleteDeliveryBydId(Integer deliveryId);
+
+    List<Delivery> getDelivery();
+
+    Delivery getDeliveryById(Integer deliveryId);
+
+    int updateDelivery(Delivery delivery);
+
+}
