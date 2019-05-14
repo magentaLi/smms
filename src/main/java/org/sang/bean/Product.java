@@ -3,12 +3,19 @@ package org.sang.bean;
 import java.util.Date;
 
 public class Product {
+    //商品代码
     private String productCode;
+    //商品名称
     private String productName;
+    //商品类别代码
     private Integer productCategoryId;
+    //商品生产日期
     private Date productionDate;
+    //保质期
     private Integer guaranteePeriod;
+    //商品价格
     private Double productPrice;
+    //商品库存
     private Integer kucun;
 
     public Product(String productCode, String productName, Integer productCategoryId, Date productionDate, Integer guaranteePeriod, Double productPrice, Integer kucun) {

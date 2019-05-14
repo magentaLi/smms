@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.sang.mapper.WastageMapper">
+
+    <select id="getAllWastage" resultType="org.sang.bean.Wastage">
+        select * from wastage
+    </select>
+
+    <select id="getWastageByProductCode" resultType="org.sang.bean.Wastage">
+        select * from wastage where productCode = #{productCode}
+    </select>
+
+    <insert id="addWastage" parameterType="org.sang.bean.Wastage">
+        insert into wastage (productCode, addOrSub, num, reason) values (#{productCode}, #{addOrSub}, #{num}, #{reason})
+    </insert>
+
+</mapper>

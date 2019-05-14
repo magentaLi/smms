@@ -2,11 +2,16 @@ package org.sang.bean;
 
 /**
  * @author magentaLi
+ * 操作日志
  */
 public class BusinessLog {
+    //操作用户名
     private String name;
+    //调用的方法
     private String method;
+    //进行的操作
     private String operation;
+    //用户ip地址
     private String ip;
 
     public BusinessLog(String name, String method, String operation, String ip) {

@@ -3,6 +3,7 @@ package org.sang.controller;
 import org.sang.bean.Menu;
 import org.sang.bean.Role;
 import org.sang.bean.User;
+import org.sang.logger.SystemControllerLog;
 import org.sang.service.PowerAndRolesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,6 +23,7 @@ public class PowerAndRolesController {
     @Autowired
     PowerAndRolesService powerAndRolesService;
 
+    @SystemControllerLog(description = "获取权限列表")
     @GetMapping("/api/get/menu")
     public HashMap getAllPower() {
         HashMap<Object, Object> map = new HashMap<>();
@@ -57,6 +59,7 @@ public class PowerAndRolesController {
         return map;
     }
 
+    @SystemControllerLog(description = "获取角色列表")
     @GetMapping("/api/get/role")
     public HashMap getAllRole() {
         HashMap<Object, Object> map = new HashMap<>();
@@ -65,6 +68,7 @@ public class PowerAndRolesController {
         return map;
     }
 
+    @SystemControllerLog(description = "增加角色")
     @PostMapping("/api/post/role")
     public int addRole(String role, String roleZh) {
         return powerAndRolesService.addRole(role, roleZh);

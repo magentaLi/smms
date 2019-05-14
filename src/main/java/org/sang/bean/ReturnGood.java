@@ -1,20 +1,31 @@
 package org.sang.bean;
 
+import java.util.Date;
+
+/**
+ * 退回表类
+ */
 public class ReturnGood {
+    //退货表ID
     private Integer returnGoodsId;
+    //商品代码
     private String productCode;
+    //退货数量
     private Integer returnCount;
-    private  String  returnReason;
+    //退货原因
+    private String returnReason;
+    //退货日期
+    private Date returnDate;
 
-    public ReturnGood() {
-
-    }
-
-    public ReturnGood(Integer returnGoodsId, String productCode, Integer returnCount, String returnReason) {
+    public ReturnGood(Integer returnGoodsId, String productCode, Integer returnCount, String returnReason, Date returnDate) {
         this.returnGoodsId = returnGoodsId;
         this.productCode = productCode;
         this.returnCount = returnCount;
         this.returnReason = returnReason;
+        this.returnDate = returnDate;
+    }
+
+    public ReturnGood() {
     }
 
     public Integer getReturnGoodsId() {
@@ -49,6 +60,14 @@ public class ReturnGood {
         this.returnReason = returnReason;
     }
 
+    public Date getReturnDate() {
+        return returnDate;
+    }
+
+    public void setReturnDate(Date returnDate) {
+        this.returnDate = returnDate;
+    }
+
     @Override
     public String toString() {
         return "ReturnGood{" +
@@ -56,6 +75,7 @@ public class ReturnGood {
                 ", productCode='" + productCode + '\'' +
                 ", returnCount=" + returnCount +
                 ", returnReason='" + returnReason + '\'' +
+                ", returnDate=" + returnDate +
                 '}';
     }
 }

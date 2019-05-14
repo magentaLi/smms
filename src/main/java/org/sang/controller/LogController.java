@@ -2,6 +2,7 @@ package org.sang.controller;
 
 import org.sang.bean.BusinessLog;
 import org.sang.bean.User;
+import org.sang.logger.SystemControllerLog;
 import org.sang.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,7 +26,8 @@ public class LogController {
     @Autowired
     UserService userService;
 
-    @GetMapping("/getLoginLog")
+    @SystemControllerLog(description = "获取登陆日志")
+    @GetMapping("/api/get/getLoginLog")
     public HashMap getLoginLog() {
         ArrayList<String> arrayList = new ArrayList<>();
         try {
@@ -64,8 +66,9 @@ public class LogController {
         return map;
     }
 
-    @GetMapping("/getBusinessLog")
-    public HashMap getBussinessLog() {
+    @SystemControllerLog(description = "获取业务日志")
+    @GetMapping("/api/get/getBusinessLog")
+    public HashMap getBusinessLog() {
         HashMap<String, Object> map = new HashMap<>();
         ArrayList<String> arrayList = new ArrayList<>();
         try {

@@ -5,12 +5,11 @@ import org.junit.runner.RunWith;
 import org.sang.bean.*;
 
 import org.sang.logger.LogUtils;
-import org.sang.mapper.ProductMapper;
-import org.sang.mapper.SupplierMapper;
-import org.sang.mapper.UserMapper;
-import org.sang.mapper.WarehousingMapper;
+import org.sang.mapper.*;
 
+import org.sang.service.UserService;
 import org.sang.service.UserServiceImpl;
+import org.sang.service.WastageService;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -193,6 +192,53 @@ public class SmmsApplicationTests {
             logs.add(businessLog);
         }
         System.out.println(logs);
+    }
+
+    @Autowired
+    WastageService wastageService;
+
+    @Test
+    public void test10() {
+//        Wastage wastage = new Wastage();
+//        wastage.setProductCode("11111111");
+//        wastage.setAddOrSub(0);
+//        wastage.setNum(10);
+//        wastage.setReason("我擦");
+//        int i = wastageService.addWastage(wastage);
+//        System.out.println(i);
+//        ArrayList<Wastage> allWastage = wastageService.getAllWastage();
+//        System.out.println(allWastage);
+        ArrayList<Wastage> wastageByProductCode = wastageService.getWastageByProductCode("11111111");
+        System.out.println(wastageByProductCode);
+    }
+
+    @Autowired
+    UserService userService;
+
+    @Test
+    public void test11() {
+        Long aLong = new Long(10);
+        User userById = userService.getUserById(aLong);
+        System.out.println(userById);
+    }
+
+    @Autowired
+    ReturnGoodMapper returnGoodMapper;
+
+    @Test
+    public void test12() {
+        ReturnGood returnGood = new ReturnGood();
+        returnGood.setProductCode("11111111");
+        returnGood.setReturnCount(3);
+        returnGood.setReturnReason("太难喝了");
+        returnGood.setReturnDate(new Date());
+        returnGoodMapper.insertReturnGood(returnGood);
+    }
+
+    @Test
+    public void test13() {
+        ArrayList<ReturnGood> returnGood = returnGoodMapper.getReturnGood(0, 5, "22222222", "2019-05-13", "2019-05-14");
+        System.out.println(returnGood);
     }
 
 }

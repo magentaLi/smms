@@ -1,7 +1,9 @@
 package org.sang.bean;
 
 public class ProductCategory {
+    //商品类别ID
     private Integer productCategoryId;
+    //商品类别名称
     private String productCategoryName;
 
     public ProductCategory() {

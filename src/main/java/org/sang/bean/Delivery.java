@@ -2,13 +2,23 @@ package org.sang.bean;
 
 import java.util.Date;
 
+/**
+ * 出库单类
+ */
 public class Delivery {
+    //出库单号
     private Integer deliveryId;
+    //出库商品代码
     private String productCode;
+    //出库对象
     private String deliveryObj;
+    //出库日期
     private Date deliveryDate;
+    //商品单价
     private Double productPrice;
+    //出库数量
     private Integer productCount;
+    //已付款项
     private Double paidMoney;
 
     public Delivery() {
