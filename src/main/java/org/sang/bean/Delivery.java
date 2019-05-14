@@ -5,7 +5,7 @@ import java.util.Date;
 public class Delivery {
     private Integer deliveryId;
     private String productCode;
-    private String supplierCode;
+    private String deliveryObj;
     private Date deliveryDate;
     private Double productPrice;
     private Integer productCount;
@@ -14,10 +14,10 @@ public class Delivery {
     public Delivery() {
     }
 
-    public Delivery(Integer deliveryId, String productCode, String supplierCode, Date deliveryDate, Double productPrice, Integer productCount, Double paidMoney) {
+    public Delivery(Integer deliveryId, String productCode, String deliveryObj, Date deliveryDate, Double productPrice, Integer productCount, Double paidMoney) {
         this.deliveryId = deliveryId;
         this.productCode = productCode;
-        this.supplierCode = supplierCode;
+        this.deliveryObj = deliveryObj;
         this.deliveryDate = deliveryDate;
         this.productPrice = productPrice;
         this.productCount = productCount;
@@ -40,12 +40,12 @@ public class Delivery {
         this.productCode = productCode;
     }
 
-    public String getSupplierCode() {
-        return supplierCode;
+    public String getDeliveryObj() {
+        return deliveryObj;
     }
 
-    public void setSupplierCode(String supplierCode) {
-        this.supplierCode = supplierCode;
+    public void setDeliveryObj(String deliveryObj) {
+        this.deliveryObj = deliveryObj;
     }
 
     public Date getDeliveryDate() {
@@ -85,7 +85,7 @@ public class Delivery {
         return "Delivery{" +
                 "deliveryId=" + deliveryId +
                 ", productCode='" + productCode + '\'' +
-                ", supplierCode='" + supplierCode + '\'' +
+                ", deliveryObj='" + deliveryObj + '\'' +
                 ", deliveryDate=" + deliveryDate +
                 ", productPrice=" + productPrice +
                 ", productCount=" + productCount +

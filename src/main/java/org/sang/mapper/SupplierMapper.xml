@@ -11,21 +11,21 @@
     </select>
 
     <!--//查询单个供应商-->
-    <!--Product getSupplierBySupplierCode(@Param("supplierCode") String supplierCode);-->
+    <!--Product getSupplierBySupplierCode(@Param("deliveryObj") String deliveryObj);-->
     <select id="getSupplierBySupplierCode" resultType="org.sang.bean.Supplier">
-        select * from supplier where supplierCode = #{supplierCode}
+        select * from supplier where deliveryObj = #{deliveryObj}
     </select>
 
     <!--//删除供应商-->
-    <!--int deleteSupplier(@Param("supplierCode") String supplierCode);-->
+    <!--int deleteSupplier(@Param("deliveryObj") String deliveryObj);-->
     <delete id="deleteSupplier" parameterType="String">
-        delete from supplier where supplierCode = #{supplierCode}
+        delete from supplier where deliveryObj = #{deliveryObj}
     </delete>
 
     <!--//添加供应商-->
     <!--int addSupplier(Supplier supplier);-->
     <insert id="addSupplier" parameterType="org.sang.bean.Supplier">
-        insert into supplier values (#{supplierCode},#{supplierName},#{supplierAddress},#{supplierTel},#{supplierEMail},#{supplierFax},#{supplierReputation},#{supplierLoan})
+        insert into supplier values (#{deliveryObj},#{supplierName},#{supplierAddress},#{supplierTel},#{supplierEMail},#{supplierFax},#{supplierReputation},#{supplierLoan})
     </insert>
 
     <!--//修改供应商-->
@@ -38,7 +38,7 @@
                             supplierFax=#{supplierFax},
                             supplierReputation=#{supplierReputation},
                             supplierLoan=#{supplierLoan}
-         where supplierCode=#{supplierCode}
+         where deliveryObj=#{deliveryObj}
     </update>
 
 

@@ -8,7 +8,7 @@
     </select>
 
     <insert id="addDelivery">
-        INSERT INTO delivery set deliveryId=#{deliveryId},productCode=#{productCode},supplierCode=#{supplierCode},deliveryDate=#{deliveryDate},
+        INSERT INTO delivery set deliveryId=#{deliveryId},productCode=#{productCode},deliveryObj=#{deliveryObj},deliveryDate=#{deliveryDate},
         productPrice=#{productPrice},productCount=#{productCount},paidMoney=#{paidMoney}
     </insert>
 
@@ -22,7 +22,7 @@
     </select>
 
     <update id="updateDelivery" parameterType="org.sang.bean.Delivery">
-        update delivery set deliveryId=#{deliveryId},productCode=#{productCode},supplierCode=#{supplierCode},deliveryDate=#{deliveryDate},productPrice=#{productPrice},
+        update delivery set deliveryId=#{deliveryId},productCode=#{productCode},deliveryObj=#{deliveryObj},deliveryDate=#{deliveryDate},productPrice=#{productPrice},
         productPrice=#{productPrice},productCount=#{productCount} where deliveryId=#{deliveryId}
     </update>
 

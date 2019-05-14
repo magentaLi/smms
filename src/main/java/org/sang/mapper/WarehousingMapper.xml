@@ -7,7 +7,7 @@
         SELECT * FROM warehousing;
     </select>
     <insert id="addWarehousing" >
-        INSERT INTO warehousing set warehousingId=#{warehousingId},productCode=#{productCode},supplierCode=#{supplierCode},warehousingDate=#{warehousingDate},productPrice=#{productPrice},
+        INSERT INTO warehousing set warehousingId=#{warehousingId},productCode=#{productCode},deliveryObj=#{deliveryObj},warehousingDate=#{warehousingDate},productPrice=#{productPrice},
         productCount=#{productCount},paidMoney=#{paidMoney}
     </insert>
 
@@ -21,7 +21,7 @@
     </select>
 
     <update id="updateWarehousingById" parameterType="org.sang.bean.Warehousing">
-        update warehousing set productCode=#{productCode},supplierCode=#{supplierCode},warehousingDate=#{warehousingDate},productPrice=#{productPrice},
+        update warehousing set productCode=#{productCode},deliveryObj=#{deliveryObj},warehousingDate=#{warehousingDate},productPrice=#{productPrice},
         productCount=#{productCount},paidMoney=#{paidMoney} where warehousingId=#{warehousingId}
     </update>
 

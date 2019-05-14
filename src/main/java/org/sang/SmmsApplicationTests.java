@@ -1,12 +1,8 @@
 package org.sang;
 
-import org.json.JSONObject;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.sang.bean.Product;
-import org.sang.bean.Supplier;
-import org.sang.bean.User;
-import org.sang.bean.Warehousing;
+import org.sang.bean.*;
 
 import org.sang.logger.LogUtils;
 import org.sang.mapper.ProductMapper;
@@ -91,7 +87,6 @@ public class SmmsApplicationTests {
 
     @Test
     public void test() {
-
         Warehousing warehousing = new Warehousing();
         warehousing.setPaidMoney(333.0);
         warehousing.setProductCount(100);
@@ -113,7 +108,6 @@ public class SmmsApplicationTests {
         log2.debug("getDBLogger===日志测试");
         //System.out.println(warehousingMapper.getWarehousingById(1234567));
         //System.out.println(warehousingMapper.updateWarehousing(warehousing));
-        return;
     }
 
 
@@ -175,5 +169,30 @@ public class SmmsApplicationTests {
         }
     }
 
+    @Test
+    public void test08() {
+        ArrayList<String> arrayList = new ArrayList<>();
+        try {
+            FileReader fr = new FileReader("D:\\IDEA-WorkSpace\\smms\\log\\bussiness\\smms_bussiness.log");
+            BufferedReader bf = new BufferedReader(fr);
+            String str;
+            // 按行读取字符串
+            while ((str = bf.readLine()) != null) {
+                arrayList.add(str);
+            }
+            bf.close();
+            fr.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        ArrayList<BusinessLog> logs = new ArrayList<>();
+        for (String str : arrayList) {
+            String substring = str.substring(83);
+            String[] s = substring.split("_");
+            BusinessLog businessLog = new BusinessLog(s[0], s[1], s[2], s[4]);
+            logs.add(businessLog);
+        }
+        System.out.println(logs);
+    }
 
 }

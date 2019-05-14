@@ -9,7 +9,7 @@ Configuration:
       - name: log.level.console
         value: info
       - name: log.path
-        value: log
+        value: /log
       - name: project.name
         value: smms
       - name: log.pattern
