@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.sang.mapper.UserRoleMapper">
+
+    <select id="countUserRole" resultType="Integer">
+        select count(id) from user_role where userid = #{uId} and rid = #{rId}
+    </select>
+    <select id="getUserRoles" resultType="Integer">
+        select rid from user_role where userid = #{uId}
+    </select>
+    <insert id="insertUserRole" parameterType="Integer">
+      insert into user_role (userid, rid) values (#{uId},#{rId})
+    </insert>
+    <delete id="deleteUserRole" parameterType="Integer">
+        delete from user_role where userid = #{uId}
+    </delete>
+
+</mapper>

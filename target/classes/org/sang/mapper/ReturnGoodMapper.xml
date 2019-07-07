@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.sang.mapper.ReturnGoodMapper">
+
+    <insert id="insertReturnGood" parameterType="org.sang.bean.ReturnGood">
+        insert into returnGoods (productCode, returnCount, returnReason, returnDate)
+        values ( #{productCode}, #{returnCount}, #{returnReason}, #{returnDate})
+    </insert>
+
+    <!--@Param("startDate") String startDate, @Param("endDate") String endDate);-->
+
+    <select id="getReturnGood" resultType="org.sang.bean.ReturnGood">
+        SELECT * FROM returnGoods
+        <where>
+            <if test="productCode!=null &amp;&amp; productCode!=&quot;&quot;">
+                productCode like '%${productCode}%'
+            </if>
+            <choose>
+                <when test="startDate!=null &amp;&amp; startDate!=&quot;&quot;">
+                    <choose>
+                        <when test="endDate!=null &amp;&amp; endDate!=&quot;&quot;">
+                            and returnDate between #{startDate} and #{endDate}
+                        </when>
+                        <otherwise>
+                            and returnDate <![CDATA[  >=  ]]> #{startDate}
+                        </otherwise>
+                    </choose>
+                </when>
+                <otherwise>
+                    <choose>
+                        <when test="endDate!=null &amp;&amp; endDate!=&quot;&quot;">
+                            and returnDate <![CDATA[   <=  ]]> #{endDate}
+                        </when>
+                        <otherwise>
+                        </otherwise>
+                    </choose>
+                </otherwise>
+            </choose>
+        </where>
+        limit #{index} , #{size}
+    </select>
+
+
+</mapper>

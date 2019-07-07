@@ -29,8 +29,8 @@ public class UserController {
     @GetMapping("/api/get/user")
     public HashMap getUsers(int index, int size, String name, String username, String phone) {
         HashMap<Object, Object> map = new HashMap<>();
-        List<User> users = userService.getUsers(index, size, name.trim(), username.trim(), phone.trim());
-        int usersSize = users.size();
+        List<User> users = userService.getUsers(index, size, name, username, phone);
+        int usersSize = userService.getUsers(1, Integer.MAX_VALUE, name, username, phone).size();
         int pages;
         if (usersSize <= size) {
             pages = 1;
@@ -101,7 +101,7 @@ public class UserController {
         return map;
     }
 
-    @SystemControllerLog(description = "添加用户角色")
+    @SystemControllerLog(description = "修改用户角色")
     @PutMapping("/api/put/userRole")
     public Map putUserRole(int uId, String roles) {
         HashMap<String, Object> map = new HashMap<>();

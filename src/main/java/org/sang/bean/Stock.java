@@ -1,6 +1,8 @@
 package org.sang.bean;
 
-public class Stock {
+import java.io.Serializable;
+
+public class Stock implements Serializable {
     private String productCode;
     private String productName;
     private Integer productCount;

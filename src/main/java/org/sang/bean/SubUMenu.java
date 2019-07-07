@@ -1,6 +1,8 @@
 package org.sang.bean;
 
-public class SubUMenu {
+import java.io.Serializable;
+
+public class SubUMenu implements Serializable {
     private Integer id;
     private String name;
     private String route;

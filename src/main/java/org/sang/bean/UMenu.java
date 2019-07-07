@@ -1,8 +1,9 @@
 package org.sang.bean;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class UMenu {
+public class UMenu implements Serializable {
     private Integer id;
     private String name;
     private String path;

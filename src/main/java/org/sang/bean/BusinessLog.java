@@ -1,10 +1,13 @@
 package org.sang.bean;
 
+import java.io.Serializable;
+import java.util.Date;
+
 /**
  * @author magentaLi
  * 操作日志
  */
-public class BusinessLog {
+public class BusinessLog implements Serializable {
     //操作用户名
     private String name;
     //调用的方法
@@ -13,12 +16,18 @@ public class BusinessLog {
     private String operation;
     //用户ip地址
     private String ip;
+    //操作的时间
+    private Date date;
 
-    public BusinessLog(String name, String method, String operation, String ip) {
+    public BusinessLog(String name, String method, String operation, String ip/*, Date date*/) {
         this.name = name;
         this.method = method;
         this.operation = operation;
         this.ip = ip;
+//        this.date = date;
+    }
+
+    public BusinessLog() {
     }
 
     public String getName() {
@@ -53,16 +62,11 @@ public class BusinessLog {
         this.ip = ip;
     }
 
-    public BusinessLog() {
+    public Date getDate() {
+        return date;
     }
 
-    @Override
-    public String toString() {
-        return "BusinessLog{" +
-                "name='" + name + '\'' +
-                ", method='" + method + '\'' +
-                ", operation='" + operation + '\'' +
-                ", ip='" + ip + '\'' +
-                '}';
+    public void setDate(Date date) {
+        this.date = date;
     }
 }

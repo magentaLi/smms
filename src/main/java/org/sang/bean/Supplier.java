@@ -1,6 +1,8 @@
 package org.sang.bean;
 
-public class Supplier {
+import java.io.Serializable;
+
+public class Supplier implements Serializable {
     private String supplierCode;
     private String supplierName;
     private String supplierAddress;

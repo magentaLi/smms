@@ -1,11 +1,12 @@
 package org.sang.bean;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * 出库单类
  */
-public class Delivery {
+public class Delivery implements Serializable {
     //出库单号
     private Integer deliveryId;
     //出库商品代码

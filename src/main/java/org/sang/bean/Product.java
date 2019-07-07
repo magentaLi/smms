@@ -1,8 +1,9 @@
 package org.sang.bean;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Product {
+public class Product implements Serializable {
     //商品代码
     private String productCode;
     //商品名称

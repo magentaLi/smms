@@ -1,11 +1,12 @@
 package org.sang.bean;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * 退回表类
  */
-public class ReturnGood {
+public class ReturnGood implements Serializable {
     //退货表ID
     private Integer returnGoodsId;
     //商品代码

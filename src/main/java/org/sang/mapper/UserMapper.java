@@ -46,4 +46,6 @@ public interface UserMapper {
 
     User getUserByName(String name);
 
+//    int getUserSize();
+
 }

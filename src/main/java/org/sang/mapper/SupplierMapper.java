@@ -5,6 +5,7 @@ import org.apache.ibatis.annotations.Param;
 import org.sang.bean.Product;
 import org.sang.bean.Supplier;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -27,4 +28,7 @@ public interface SupplierMapper {
 
     //查询单个供应商
     Supplier getSupplierBySupplierCode(@Param("supplierCode") String supplierCode);
+
+    ArrayList<Supplier> getSuppliers(@Param("index") int index, @Param("size") int size, @Param("supplierName") String supplierName, @Param("supplierReputation") String supplierReputation);
+
 }

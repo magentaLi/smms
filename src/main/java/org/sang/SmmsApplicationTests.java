@@ -4,12 +4,11 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.sang.bean.*;
 
+import org.sang.common.DateConverter;
 import org.sang.logger.LogUtils;
 import org.sang.mapper.*;
 
-import org.sang.service.UserService;
-import org.sang.service.UserServiceImpl;
-import org.sang.service.WastageService;
+import org.sang.service.*;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -241,4 +240,79 @@ public class SmmsApplicationTests {
         System.out.println(returnGood);
     }
 
+    @Autowired
+    DeliveryService deliveryService;
+
+    @Test
+    public void test14() {
+        List<Delivery> delivery = deliveryService.getDelivery();
+        System.out.println(delivery);
+    }
+
+    @Autowired
+    ProductCategoryService productCategoryService;
+
+    @Test
+    public void test15() {
+        ArrayList<ProductCategory> productCategory = productCategoryService.getProductCategory(1, 10, "");
+        System.out.println(productCategory);
+    }
+
+    @Autowired
+    UMenuMapper uMenuMapper;
+
+    @Test
+    public void test16() {
+        List<UMenu> allUMenu = uMenuMapper.getAllUMenu();
+        System.out.println(allUMenu);
+    }
+
+    @Test
+    public void test17() {
+        int[] test = {150, 151};
+        uMenuMapper.updateSubMenuForRole(6, test);
+    }
+
+    @Autowired
+    ProductService productService;
+
+    @Test
+    public void test18() {
+        ArrayList<Product> products = productService.getProducts(1, 10, "11111111", "", "");
+        System.out.println(products);
+    }
+
+    @Autowired
+    RoleService roleService;
+
+    @Test
+    public void test19() {
+        ArrayList<Integer> roleMenu = roleService.getRoleMenu(6);
+        System.out.println(roleMenu);
+    }
+
+    @Autowired
+    DateConverter dateConverter;
+
+    @Test
+    public void test20() {
+        Date convert = dateConverter.convert("2015-12-21");
+        System.out.println(convert);
+    }
+
+    @Autowired
+    DeliveryMapper deliveryMapper;
+
+    @Test
+    public void test21() {
+        Delivery delivery = new Delivery();
+        delivery.setDeliveryDate(new Date());
+        delivery.setDeliveryObj("李嘉坤");
+        delivery.setPaidMoney(100.0);
+        delivery.setDeliveryId(132456);
+        delivery.setProductCode("11111111");
+        delivery.setProductCount(20);
+        delivery.setProductPrice(20.3);
+        deliveryMapper.addDelivery(delivery);
+    }
 }

@@ -1,11 +1,13 @@
 package org.sang.controller;
 
 import org.sang.bean.Delivery;
+import org.sang.bean.Warehousing;
 import org.sang.logger.SystemControllerLog;
 import org.sang.service.DeliveryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -50,13 +52,26 @@ public class DeliveryController {
 
     @SystemControllerLog(description = "获取所有出库单")
     @GetMapping("/api/get/delivery")
-    List<Delivery> getDelivery() {
-        return deliveryService.getDelivery();
+    public HashMap getDeliverys(int index, int size, String deliveryId, String productCode) {
+        HashMap<Object, Object> map = new HashMap<>();
+        ArrayList<Delivery> deliverys = deliveryService.getDeliverys(index, size, deliveryId, productCode);
+        int deliverySize = deliveryService.getDeliverys(1, Integer.MAX_VALUE, deliveryId, productCode).size();
+        int pages;
+        if (deliverySize <= size) {
+            pages = 1;
+        } else {
+            pages = deliverySize / size + 1;
+        }
+        map.put("currentPage", index);
+        map.put("dataSize", deliverySize);
+        map.put("countOfPage", pages);
+        map.put("deliverys", deliverys);
+        return map;
     }
 
     @SystemControllerLog(description = "通过出库单号获取出库单")
     @GetMapping("/api/get/delivery/deliveryId")
-    Delivery getDeliveryById(Integer deliveryId) {
+    public Delivery getDeliveryById(Integer deliveryId) {
         return deliveryService.getDeliveryById(deliveryId);
     }
 

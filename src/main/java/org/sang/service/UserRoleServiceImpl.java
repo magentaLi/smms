@@ -4,6 +4,9 @@ import org.sang.bean.Role;
 import org.sang.mapper.RoleMapper;
 import org.sang.mapper.UserRoleMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -12,6 +15,7 @@ import java.util.ArrayList;
  * @author magentaLi
  */
 @Service
+//@CacheConfig(keyGenerator = "myKeyGenerator")
 public class UserRoleServiceImpl implements UserRoleService {
     @Autowired
     UserRoleMapper userRoleMapper;
@@ -19,6 +23,7 @@ public class UserRoleServiceImpl implements UserRoleService {
     RoleMapper roleMapper;
 
     @Override
+//    @Cacheable(value = "roles", unless = "#result == null")
     public ArrayList<Role> getRolesByUId(Integer uId) {
         ArrayList<Role> roles = new ArrayList<>();
         ArrayList<Integer> userRoles = userRoleMapper.getUserRoles(uId);

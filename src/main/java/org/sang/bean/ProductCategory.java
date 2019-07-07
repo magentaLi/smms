@@ -1,6 +1,8 @@
 package org.sang.bean;
 
-public class ProductCategory {
+import java.io.Serializable;
+
+public class ProductCategory implements Serializable {
     //商品类别ID
     private Integer productCategoryId;
     //商品类别名称

@@ -7,6 +7,7 @@ import org.sang.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -20,7 +21,7 @@ import java.util.regex.Pattern;
  * @author magentaLi
  */
 
-@Controller
+@RestController
 public class LogController {
 
     @Autowired
@@ -86,9 +87,16 @@ public class LogController {
             e.printStackTrace();
         }
         ArrayList<BusinessLog> logs = new ArrayList<>();
+        String patternStr1 = "[0-9]{4}[-][0-9]{1,2}[-][0-9]{1,2}[ ][0-9]{1,2}[:][0-9]{1,2}[:][0-9]{1,2}";
+        Pattern pattern1 = Pattern.compile(patternStr1);
+        String date;
         for (String str : arrayList) {
             String substring = str.substring(83);
             String[] s = substring.split("_");
+//            Matcher matcher1 = pattern1.matcher(str);
+//            if (matcher1.find()) {
+//                date = matcher1.group();
+//            }
             BusinessLog businessLog = new BusinessLog(s[0], s[1], s[2], s[4]);
             logs.add(businessLog);
         }

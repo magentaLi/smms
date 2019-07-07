@@ -3,6 +3,7 @@ package org.sang.service;
 import org.apache.ibatis.annotations.Param;
 import org.sang.bean.Supplier;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public interface SupplierService {
@@ -21,7 +22,6 @@ public interface SupplierService {
     //查询单个供应商
     Supplier getSupplierBySupplierCode(@Param("supplierCode") String supplierCode);
 
-
-
+    ArrayList<Supplier> getSuppliers(int index, int size, String supplierName, String supplierReputation);
 
 }

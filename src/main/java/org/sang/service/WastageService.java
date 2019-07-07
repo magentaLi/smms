@@ -9,10 +9,10 @@ import java.util.ArrayList;
  */
 public interface WastageService {
 
-    ArrayList<Wastage> getAllWastage();
-
     ArrayList<Wastage> getWastageByProductCode(String productCode);
 
     int addWastage(Wastage wastage);
 
+    ArrayList<Wastage> getWastages(int index, int size, String productName, String productCode);
+    
 }

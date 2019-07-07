@@ -1,10 +1,12 @@
 package org.sang.bean;
 
+import java.io.Serializable;
+
 /**
  * @author magentaLi
  * 耗损类
  */
-public class Wastage {
+public class Wastage implements Serializable {
     private Integer id;
     private String productCode;
     private Integer addOrSub;

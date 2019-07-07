@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -15,7 +16,7 @@ import java.util.Map;
 /**
  * @author magentaLi
  */
-@Controller
+@RestController
 public class ReturnGoodController {
 
     @Autowired
@@ -44,7 +45,7 @@ public class ReturnGoodController {
     public HashMap getUsers(int index, int size, String productCode, String startDate, String endDate) {
         HashMap<Object, Object> map = new HashMap<>();
         ArrayList<ReturnGood> returnGoods = returnGoodService.getReturnGood(index, size, productCode, startDate, endDate);
-        int returnGoodsSize = returnGoods.size();
+        int returnGoodsSize = returnGoodService.getReturnGood(1, Integer.MAX_VALUE, productCode, startDate, endDate).size();
         int pages;
         if (returnGoodsSize <= size) {
             pages = 1;
@@ -57,5 +58,5 @@ public class ReturnGoodController {
         map.put("allReturnGoods", returnGoods);
         return map;
     }
-    
+
 }

@@ -1,6 +1,7 @@
 package org.sang.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.sang.bean.Wastage;
 
 import java.util.ArrayList;
@@ -10,8 +11,8 @@ import java.util.ArrayList;
  */
 @Mapper
 public interface WastageMapper {
-
-    ArrayList<Wastage> getAllWastage();
+    //名称 编号 类别
+    ArrayList<Wastage> getWastages(@Param("index") int index, @Param("size") int size, @Param("productName") String productName, @Param("productCode") String productCode);
 
     ArrayList<Wastage> getWastageByProductCode(String productCode);
 

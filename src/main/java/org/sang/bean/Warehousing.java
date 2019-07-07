@@ -1,8 +1,9 @@
 package org.sang.bean;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Warehousing {
+public class Warehousing implements Serializable {
     private Integer warehousingId;
     private String productCode;
     private String supplierCode;
@@ -13,6 +14,7 @@ public class Warehousing {
 
     public Warehousing() {
     }
+
     public Warehousing(Integer warehousingId, String productCode, String supplierCode, Date warehousingDate, Double productPrice, Integer productCount, Double paidMoney) {
         this.warehousingId = warehousingId;
         this.productCode = productCode;
